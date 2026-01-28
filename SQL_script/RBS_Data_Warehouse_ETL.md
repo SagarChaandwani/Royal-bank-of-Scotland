@@ -8,22 +8,18 @@ DESCRIPTION:    ETL Transformation Logic to build the Star Schema for Power BI.
 ===========================================================================
 */
 
---  ========================================================================
---  1. DIMENSION: Customer Registry
---  Objective: Deduplicate customer master data and calculate demographic bins.
---  ========================================================================
-
-
-
-
- CREATE VIEW Dim_Customer_Registry AS
+-- ========================================================================
+-- 1. DIMENSION: Customer Registry
+-- Objective: Deduplicate customer master data and calculate demographic bins.
+-- ========================================================================
+CREATE VIEW Dim_Customer_Registry AS
 WITH Raw_Cust AS (
     SELECT 
         Customer_ID,
         Age,
         Region,
         Segment, -- Family, Retiree, Young Pro, etc.
-        Digital_Maturity_Score, -- 1 to 10
+        Digital_Maturity_Score, -- Scale 1 to 10
         Nationality_Status,
         -- Window Function: Get the latest record per customer if duplicates exist
         ROW_NUMBER() OVER(PARTITION BY Customer_ID ORDER BY Last_Updated_Date DESC) as rn
@@ -52,16 +48,10 @@ SELECT
 FROM Raw_Cust
 WHERE rn = 1;
 
-
-
-
 -- ========================================================================
 -- 2. FACT: Credit Exposure Audit
 -- Objective: Calculate LTV, Risk Bands, and Default Status for the Credit Portfolio.
 -- ========================================================================
-
-
-
 CREATE VIEW Fct_Credit_Exposure_Audit AS
 WITH Loan_Calculations AS (
     SELECT 
@@ -111,16 +101,10 @@ SELECT
 
 FROM Loan_Calculations lc;
 
-
-
-
 -- ========================================================================
 -- 3. FACT: Capital Flight Transactions
 -- Objective: Analyze money flowing out to Fintech competitors (Monzo, Revolut, etc.)
 -- ========================================================================
-
-
-
 CREATE VIEW Fct_Capital_Flight_Transactions AS
 SELECT 
     txn.Transaction_ID,
@@ -139,4 +123,4 @@ SELECT
     txn.Missed_EMI_Flag
 
 FROM Staging_Transactions txn
-WHERE txn.Transaction_Type = 'Outbound';
+WHERE txn.Transaction_Type = 'Outbound';e = 'Outbound';
