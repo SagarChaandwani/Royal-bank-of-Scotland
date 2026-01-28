@@ -103,7 +103,7 @@ The Scatter Plot employs a **Ternary Risk Segmentation** model, color-coding cus
 ### 3️⃣ Dashboard 3: Digital Churn & Behavior
 *The "Customer View" – Analyzing retention and Neobank competition.*
 
-![Digital Churn Screenshot](./images/dashboard3_churn.png)
+![Digital Churn Screenshot](Dashboard_previews/3.Digital_Churn_&_Behavior.png)
 
 #### 📊 Visual Forensics
 *   **Churn Rate by Digital Engagement (Column Chart):**
