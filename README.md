@@ -22,14 +22,18 @@ The bank faced a "Blind Spot" crisis across three critical vectors:
 ---
 
 ## 📑 Table of Contents
-1.  [Executive Summary](#-executive-summary--quantified-impact)
-2.  [Dashboard Deep Dive](#-dashboard-deep-dive)
+1.  [Executive Summary & Quantified Impact](#-executive-summary--quantified-impact)
+2.  [Key Business Questions Solved](#-key-business-questions-solved)
+3.  [Data Structure (Star Schema)](#-data-structure-star-schema)
+4.  [Dashboard Deep Dive](#-dashboard-deep-dive)
     *   [Dashboard 1: Credit Risk Overview](#1%EF%B8%8F%E2%83%A3-dashboard-1-credit-risk-overview)
     *   [Dashboard 2: The Risk Quadrant (Advanced Analytics)](#2%EF%B8%8F%E2%83%A3-dashboard-2-the-risk-quadrant-advanced-analytics)
     *   [Dashboard 3: Digital Churn & Behavior](#3%EF%B8%8F%E2%83%A3-dashboard-3-digital-churn--behavior)
-3.  [UI/UX Design Philosophy](#-uiux-design-philosophy)
-4.  [Technical Implementation](#-technical-implementation--expertise)
-5.  [Strategic Recommendations](#-strategic-recommendations)
+5.  [UI/UX Design Philosophy](#-uiux-design-philosophy)
+6.  [Technical Implementation](#-technical-implementation--expertise)
+7.  [Strategic Recommendations](#-strategic-recommendations)
+8.  [Assumptions & Future Scope](#-assumptions--future-scope)
+9.  [Data Dictionary](#-data-dictionary)
 
 ---
 
@@ -40,6 +44,33 @@ This project consolidated millions of transaction rows into a **Star Schema** mo
 *   **Portfolio Health:** Identified **£552M** in "At-Risk" Exposure, driven primarily by the Subprime segment.
 *   **Capital Flight:** Traced **£15M** in outbound transfers specifically to Fintech competitors (Wise, Monzo).
 *   **Churn Correlation:** Discovered that customers with a **Digital Score < 5.0** have a 3x higher churn rate, signaling a UX/App failure.
+
+---
+
+## ❓ Key Business Questions Solved
+
+| Stakeholder | Business Question | Solution Delivered |
+| :--- | :--- | :--- |
+| **Chief Risk Officer** | "Where is our most toxic debt concentrated?" | **Risk Quadrant Matrix** isolates High LTV + Low Credit Score assets. |
+| **Head of Digital** | "Why are we losing deposits to Neobanks?" | **Fintech Leakage Analysis** correlates Capital Flight with Low Digital Maturity. |
+| **Regional Director** | "Which region requires tighter lending controls?" | **Geo-Spatial Analysis** flagged North West as the highest leverage zone. |
+| **Underwriting Team** | "Are we over-exposed to Subprime borrowers?" | **Subprime Trend Tracker** monitors the volume of <600 Credit Score approvals. |
+
+---
+
+## 🗂 Data Structure (Star Schema)
+
+The data model is architected as a **Star Schema** to ensure high-performance filtering and accurate aggregations.
+
+*   **Fact Tables (The Transactions):**
+    *   `Fct_Credit_Exposure_Audit`: Contains loan balances, LTV ratios, and default flags.
+    *   `Fct_Capital_Flight_Transactions`: Tracks outbound money movement and beneficiary banks.
+*   **Dimension Tables (The Context):**
+    *   `Dim_Customer_Registry`: Customer demographics, digital scores, and segmentation.
+    *   `Dim_Product_Catalogue`: Loan types, interest rate types.
+    *   `Dim_Calendar_Lookup`: Standard date table for Time Intelligence (MoM, YoY).
+*   **Relationships:**
+    *   Strict **One-to-Many (1:*)** relationships flowing from Dimensions to Facts.
 
 ---
 
@@ -154,4 +185,30 @@ Based on the intelligence gathered, the following strategic pivots are recommend
 3.  **Competitor Defense:** To combat the £15M flight to **Wise**, introduce a "Fee-Free FX" product tier for "Young Pro" customers to retain their international transaction volume.
 
 ---
-*Author: [Sagar Chaandwani]*
+
+## 🧠 Assumptions & Future Scope
+
+### Assumptions
+*   **Currency:** All financial figures are in GBP (£).
+*   **Fiscal Year:** Data aligns with the UK Fiscal Year (April - March).
+*   **Default Definition:** A loan is flagged as "Default" after 90 days of missed payments.
+*   **Digital Score:** A proprietary metric (0-10) calculated based on App Logins, Feature Usage, and Online Transactions.
+
+### Future Scope
+*   **Predictive AI:** Integrate Python/R scripts to forecast future "Capital Flight" based on current transaction patterns.
+*   **Real-Time Alerts:** Implement Power Automate triggers to email Risk Officers when a High-Value customer initiates a transfer to a Crypto platform or Neobank.
+
+---
+
+## 📖 Data Dictionary
+
+| Term | Definition | Logic Used |
+| :--- | :--- | :--- |
+| **LTV (Loan-to-Value)** | The ratio of the loan amount to the value of the asset purchased. | `Loan Balance / Collateral Value` |
+| **Subprime** | Borrowers with a credit score below 600. | `Credit Score < 600` |
+| **Capital Flight** | Money transferred out of RBS to specific Fintech competitors. | `Beneficiary Bank IN ('Monzo', 'Wise', 'Revolut')` |
+| **Digital Maturity** | A score indicating how "digital-first" a customer is. | Scale of 1-10 (10 = Fully Mobile Banking User) |
+| **Toxic Asset** | A loan with high probability of default and low recovery value. | `LTV > 80% AND Credit Score < 600` |
+
+---
+*Author: Sagar Chaandwani*
