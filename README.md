@@ -48,7 +48,7 @@ This project consolidated millions of transaction rows into a **Star Schema** mo
 ### 1️⃣ Dashboard 1: Credit Risk Overview
 *The "Pulse Check" – A high-level executive summary of portfolio health.*
 
-![Credit Risk Overview Screenshot](Dashboard_previews/1. Credit_Risk_Overview.png)
+![Credit Risk Overview Screenshot]Dashboard_previews/1. Credit_Risk_Overview.png
 
 #### 📊 Visual Forensics
 *   **12-Month Default Trend (Line Chart):** Tracks the volatility of default rates over the fiscal year.
