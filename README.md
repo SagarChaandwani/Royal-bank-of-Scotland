@@ -60,7 +60,7 @@ This project consolidated millions of transaction rows into a **Star Schema** mo
 
 ## 🗂 Data Structure (Star Schema)
 
-![Data Model Screenshot](dashboard_previews/3.Model_View.png)
+![Data Model Screenshot](Dashboard_previews/4.Model_View.png)
 
 The data model is architected as a **Star Schema** to ensure high-performance filtering and accurate aggregations.
 
