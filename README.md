@@ -68,7 +68,7 @@ The power of this dashboard lies in its **Cross-Filtering capabilities** (Left S
 ### 2️⃣ Dashboard 2: The Risk Quadrant (Advanced Analytics)
 *The "Deep Dive" – Identifying the intersection of leverage and creditworthiness.*
 
-![Risk Quadrant Screenshot](./images/dashboard2_riskquadrant.png)
+![Risk Quadrant Screenshot](Dashboard_previews/2.Risk_Quadrant.png)
 
 #### 📊 Visual Forensics
 *   **Risk Concentration Scatter Plot (LTV vs Credit Score):** *The Hero Visual.*
