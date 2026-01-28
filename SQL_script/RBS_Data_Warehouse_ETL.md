@@ -12,6 +12,10 @@ DESCRIPTION:    ETL Transformation Logic to build the Star Schema for Power BI.
 -- 1. DIMENSION: Customer Registry
 -- Objective: Deduplicate customer master data and calculate demographic bins.
 -- ========================================================================
+
+
+
+
 CREATE VIEW Dim_Customer_Registry AS
 WITH Raw_Cust AS (
     SELECT 
