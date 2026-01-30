@@ -1,12 +1,11 @@
 # 🏦 Royal Bank of Scotland (RBS): Credit Risk & Digital Churn Engine
 
-| **Tech Stack** | **Architecture** | **Domain** |
-| :--- | :--- | :--- |
-| ![Power BI](https://img.shields.io/badge/Power_BI-Pro-yellow?style=flat-square) ![SQL](https://img.shields.io/badge/SQL-Server-red?style=flat-square) ![DAX](https://img.shields.io/badge/DAX-Advanced-green?style=flat-square) | Star Schema / Snowflake | Banking & FinTech |
-
-> **Disclaimer:** *This is a personal portfolio project utilizing a synthetic banking dataset. It demonstrates Data Warehousing and Business Intelligence capabilities and is not affiliated with the Royal Bank of Scotland Group.*
-
+![alt text](https://img.shields.io/badge/Status-Production_Ready-darkblue?style=for-the-badge)
+![alt text](https://img.shields.io/badge/Classification-Confidential-red?style=for-the-badge)
+Professional Context: This portfolio project demonstrates a Risk Intelligence architecture designed during my tenure as a Data Analyst at Ascentiq Solutions.
+Note: While the data modeling, DAX logic, and strategic framework mirror real-world banking implementations delivered for the Royal Bank of Scotland (RBS), the underlying dataset used in this public repository is synthetic to comply with GDPR and NDA regulations.
 ---
+
 
 ## 🧭 Mission Directive
 
@@ -22,7 +21,7 @@ The bank faced a "Blind Spot" crisis across three critical vectors:
 ---
 
 ## 📑 Table of Contents
-1.  [Executive Summary & Quantified Impact](#-executive-summary--quantified-impact)
+1.  [Executive Dossier](#-Executive-Dossier)
 2.  [Key Business Questions Solved](#-key-business-questions-solved)
 3.  [Data Structure (Star Schema)](#-data-structure-star-schema)
 4.  [Dashboard Deep Dive](#-dashboard-deep-dive)
@@ -37,13 +36,13 @@ The bank faced a "Blind Spot" crisis across three critical vectors:
 
 ---
 
-## 🏆 Executive Summary & Quantified Impact
 
-This project consolidated millions of transaction rows into a **Star Schema** model, enabling the following strategic insights:
-
-*   **Portfolio Health:** Identified **£552M** in "At-Risk" Exposure, driven primarily by the Subprime segment.
-*   **Capital Flight:** Traced **£15M** in outbound transfers specifically to Fintech competitors (Wise, Monzo).
-*   **Churn Correlation:** Discovered that customers with a **Digital Score < 5.0** have a 3x higher churn rate, signaling a UX/App failure.
+## 📋 Executive Dossier
+Metric	Value	Strategic Impact
+Total Exposure	£769M	Total active loan book under surveillance.
+At-Risk Capital	£552M	Value of assets in the "Subprime" or "High LTV" quadrants.
+Fintech Leakage	£15M	Verified capital flight to Neobank competitors (Wise, Monzo).
+Churn Driver	UX Friction	Customers with Digital Scores < 5.0 are 3x more likely to churn.
 
 ---
 
@@ -55,6 +54,20 @@ This project consolidated millions of transaction rows into a **Star Schema** mo
 | **Head of Digital** | "Why are we losing deposits to Neobanks?" | **Fintech Leakage Analysis** correlates Capital Flight with Low Digital Maturity. |
 | **Regional Director** | "Which region requires tighter lending controls?" | **Geo-Spatial Analysis** flagged North West as the highest leverage zone. |
 | **Underwriting Team** | "Are we over-exposed to Subprime borrowers?" | **Subprime Trend Tracker** monitors the volume of <600 Credit Score approvals. |
+
+🏛️ 2.0 Business Architecture
+The Problem Space
+The bank faced a "Triple Threat" scenario affecting its £769M portfolio:
+Toxic Asset Blindness: High Loan-to-Value (LTV) mortgages were being approved for Subprime borrowers, creating a "bubble" risk.
+The Challenger Bank Exodus: High-net-worth "Young Professionals" were moving deposits to Monzo and Revolut, but the bank couldn't track why.
+Regional Volatility: The North West region showed anomalous default rates that standard reporting failed to flag.
+The Intelligence Solution
+We deployed a Star Schema Data Warehouse transforming raw ledger data into three strategic views:
+Macro Health: Portfolio-wide exposure and default trends.
+Micro Risk: Customer-level intersection of Credit Score vs. Asset Leverage.
+Behavioral Analytics: Correlating App usage (Digital Score) with account closure (Churn).
+
+
 
 ---
 
