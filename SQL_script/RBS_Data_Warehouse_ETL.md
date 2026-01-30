@@ -1,7 +1,9 @@
 /*
 ========================================================================================
 PROJECT:    RBS Credit Risk & Digital Churn Analysis
+
 AUTHOR:     [Sagar Chaandwani]
+
 OBJECTIVE:  ETL Script to build the Star Schema (Facts & Dimensions) for Power BI.
             
 KEY LOGIC:
