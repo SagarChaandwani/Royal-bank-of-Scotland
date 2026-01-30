@@ -2,8 +2,10 @@
 
 ![alt text](https://img.shields.io/badge/Status-Production_Ready-darkblue?style=for-the-badge)
 ![alt text](https://img.shields.io/badge/Classification-Confidential-red?style=for-the-badge)
-Professional Context: This portfolio project demonstrates a Risk Intelligence architecture designed during my tenure as a Data Analyst at Ascentiq Solutions.
-Note: While the data modeling, DAX logic, and strategic framework mirror real-world banking implementations delivered for the Royal Bank of Scotland (RBS), the underlying dataset used in this public repository is synthetic to comply with GDPR and NDA regulations.
+
+> **Professional Context:** This portfolio project demonstrates a Risk Intelligence architecture designed during my tenure as a Data Analyst at **Ascentiq Solutions**.
+>
+> *Note: While the data modeling, DAX logic, and strategic framework mirror real-world banking implementations delivered for the Royal Bank of Scotland (RBS), the underlying dataset used in this public repository is synthetic to comply with GDPR and NDA regulations.*
 ---
 
 
@@ -20,14 +22,27 @@ The bank faced a "Blind Spot" crisis across three critical vectors:
 
 ---
 
+## 📋 Executive Dossier
+
+| **Metric** | **Value** | **Strategic Impact** |
+| :--- | :--- | :--- |
+| **Total Exposure** | **£769M** | Total active loan book currently under surveillance. |
+| **At-Risk Capital** | **£552M** | Value of assets currently sitting in "Subprime" or "High LTV" quadrants. |
+| **Fintech Leakage** | **£15M** | Verified capital flight to Neobank competitors (Wise, Monzo) in the last fiscal period. |
+| **Churn Driver** | **UX Friction** | Customers with Digital Scores < 5.0 are **3x** more likely to churn than digital natives. |
+
+
+---
+
+
 ## 📑 Table of Contents
-1.  [Executive Dossier](#-Executive-Dossier)
-2.  [Key Business Questions Solved](#-key-business-questions-solved)
+1.  [Executive Summary & Quantified Impact](#-executive-summary--quantified-impact)
+2.  [Business Architecture: The Triple Threat](#-business-architecture-the-triple-threat)
 3.  [Data Structure (Star Schema)](#-data-structure-star-schema)
-4.  [Dashboard Deep Dive](#-dashboard-deep-dive)
-    *   [Dashboard 1: Credit Risk Overview](#1%EF%B8%8F%E2%83%A3-dashboard-1-credit-risk-overview)
-    *   [Dashboard 2: The Risk Quadrant (Advanced Analytics)](#2%EF%B8%8F%E2%83%A3-dashboard-2-the-risk-quadrant-advanced-analytics)
-    *   [Dashboard 3: Digital Churn & Behavior](#3%EF%B8%8F%E2%83%A3-dashboard-3-digital-churn--behavior)
+4.  [Dashboard Forensics (Deep Dive)(#-dashboard-deep-dive)
+    *   [Dashboard 1: Credit Risk Overview (Macro)](#1%EF%B8%8F%E2%83%A3-dashboard-1-credit-risk-overview)
+    *   [Dashboard 2: The Risk Quadrant (Micro](#2%EF%B8%8F%E2%83%A3-dashboard-2-the-risk-quadrant-advanced-analytics)
+    *   [Dashboard 3: Digital Churn & Behavior (Customer)](#3%EF%B8%8F%E2%83%A3-dashboard-3-digital-churn--behavior)
 5.  [UI/UX Design Philosophy](#-uiux-design-philosophy)
 6.  [Technical Implementation](#-technical-implementation--expertise)
 7.  [Strategic Recommendations](#-strategic-recommendations)
@@ -37,35 +52,25 @@ The bank faced a "Blind Spot" crisis across three critical vectors:
 ---
 
 
-## 📋 Executive Dossier
-Metric	Value	Strategic Impact
-Total Exposure	£769M	Total active loan book under surveillance.
-At-Risk Capital	£552M	Value of assets in the "Subprime" or "High LTV" quadrants.
-Fintech Leakage	£15M	Verified capital flight to Neobank competitors (Wise, Monzo).
-Churn Driver	UX Friction	Customers with Digital Scores < 5.0 are 3x more likely to churn.
+## 🏆 Executive Summary & Quantified Impact
+
+This project consolidated millions of transaction rows into a centralized **Risk Engine**, identifying critical vulnerabilities in the bank's lending portfolio.
+
+**Strategic Insights:**
+*   **Portfolio Health:** Identified **49.8%** of the portfolio is categorized as "High Risk," primarily driven by aggressive lending in the North West region.
+*   **Capital Flight:** Traced **£15M** in outbound transfers. Analysis confirms this is not random spending but structural migration to competitors offering better FX rates (Wise) and App UX (Monzo).
+*   **Digital Correlation:** Proven a direct correlation between **Digital Maturity** and **Retention**. The "Digital Gap" (Scores < 5.0) is the single biggest predictor of customer attrition.
 
 ---
 
-## ❓ Key Business Questions Solved
+## 🏛️ Business Architecture: The Triple Threat
 
-| Stakeholder | Business Question | Solution Delivered |
-| :--- | :--- | :--- |
-| **Chief Risk Officer** | "Where is our most toxic debt concentrated?" | **Risk Quadrant Matrix** isolates High LTV + Low Credit Score assets. |
-| **Head of Digital** | "Why are we losing deposits to Neobanks?" | **Fintech Leakage Analysis** correlates Capital Flight with Low Digital Maturity. |
-| **Regional Director** | "Which region requires tighter lending controls?" | **Geo-Spatial Analysis** flagged North West as the highest leverage zone. |
-| **Underwriting Team** | "Are we over-exposed to Subprime borrowers?" | **Subprime Trend Tracker** monitors the volume of <600 Credit Score approvals. |
+The bank faced a "Blind Spot" crisis across three critical vectors:
+1.  **Risk Segmentation:** Inability to isolate "Toxic Assets" (High LTV + Low Credit Score) from the general population.
+2.  **Fintech Leakage:** Millions were flowing to Neobanks, but the bank could not correlate this with customer demographics.
+3.  **Regional Exposure:** Lack of visibility into which geographic hubs were driving the highest default rates.
 
-🏛️ 2.0 Business Architecture
-The Problem Space
-The bank faced a "Triple Threat" scenario affecting its £769M portfolio:
-Toxic Asset Blindness: High Loan-to-Value (LTV) mortgages were being approved for Subprime borrowers, creating a "bubble" risk.
-The Challenger Bank Exodus: High-net-worth "Young Professionals" were moving deposits to Monzo and Revolut, but the bank couldn't track why.
-Regional Volatility: The North West region showed anomalous default rates that standard reporting failed to flag.
-The Intelligence Solution
-We deployed a Star Schema Data Warehouse transforming raw ledger data into three strategic views:
-Macro Health: Portfolio-wide exposure and default trends.
-Micro Risk: Customer-level intersection of Credit Score vs. Asset Leverage.
-Behavioral Analytics: Correlating App usage (Digital Score) with account closure (Churn).
+---
 
 
 
@@ -89,32 +94,40 @@ The data model is architected as a **Star Schema** to ensure high-performance fi
 
 ---
 
-## 🔍 Dashboard Deep Dive
+## 🔍 Dashboard Forensics (Deep Dive)
 
-### 1️⃣ Dashboard 1: Credit Risk Overview
+### 1️⃣ Dashboard 1: Credit Risk Overview (Macro)
 *The "Pulse Check" – A high-level executive summary of portfolio health.*
 
 ![Credit Risk Overview Dashboard](Dashboard_previews/1.Credit_Risk_Overview.png)
 
-#### 📊 Visual Forensics
-*   **12-Month Default Trend (Line Chart):** Tracks the volatility of default rates over the fiscal year.
-    *   *Insight:* Shows a distinct spike in July (peaking at ~8%), correlating with external economic factors.
-*   **Exposure by Region (Bar Chart):** Breaks down the £769M portfolio by geography.
-    *   *Insight:* **North West** is the most highly leveraged region (>£300M), requiring tighter lending criteria there.
-*   **Portfolio Risk Distribution (Donut Chart):** Segments the customer base into High, Medium, and Low risk buckets.
-    *   *Insight:* **49.8%** of the portfolio is currently tagged as High Risk, a critical alert for the Underwriting team.
+#### 🧮 KPI Analysis (Heads-Up Display)
+*   **Total Exposure (£769M):** The sum of all active loan balances. This represents the total capital currently deployed in the market.
+*   **Exposure at Risk (6.4%):** The percentage of the portfolio held by borrowers who have missed at least one payment or breached covenants.
+*   **Default Rate (6.2%):** The realized loss rate. A trend arrow (▲ 3.0%) indicates this is worsening Month-over-Month.
+*   **Avg LTV (62%):** The average Loan-to-Value ratio. While 62% appears healthy, the deep dive reveals pockets of 90%+ leverage.
 
-#### 🎛️ Interactive Slicing Dynamics
-The power of this dashboard lies in its **Cross-Filtering capabilities** (Left Sidebar).
-*   **Scenario A (The "Mortgage" View):** When filtering by *Loan Product = Mortgage*, the **Avg LTV** typically rises to ~80%, revealing higher asset leverage compared to *Personal Loans*.
-*   **Scenario B (The "Subprime" View):** Filtering by *Customer Segment = Teen/Young Pro* dramatically shifts the **12-Month Default Trend**, exposing that younger demographics are driving the July volatility spike.
-
+#### 📊 Chart Forensics
+*   **Portfolio Risk Distribution (Donut Chart):**
+    *   *What:* Splits the portfolio into Low, Medium, and High risk buckets based on internal credit scoring.
+    *   *Insight:* **49.8%** of the book is High Risk. This imbalance suggests the bank has been too aggressive in customer acquisition.
+*   **12-Month Default Trend (Line Chart):**
+    *   *What:* Tracks default rates over time.
+    *   *Insight:* A distinct spike in **July (peaking at ~8%)** correlates with external interest rate hikes, suggesting the portfolio is highly sensitive to variable rate changes.
+*   **Exposure by Region (Bar Chart):**
+    *   *What:* Geographic breakdown of lending.
+    *   *Insight:* **North West** holds >£300M in exposure, significantly more than London. This concentration risk requires immediate geofencing of lending policies.
 ---
 
-### 2️⃣ Dashboard 2: The Risk Quadrant (Advanced Analytics)
+### 2️⃣ Dashboard 2: The Risk Quadrant (Micro)
 *The "Deep Dive" – Identifying the intersection of leverage and creditworthiness.*
 
 ![Risk Quadrant Screenshot](Dashboard_previews/2.Risk_Quadrant.png)
+
+#### 🧮 KPI Analysis
+*   **High LTV Exposure (39%):** The portion of loans where the debt is >80% of the asset value.
+*   **Subprime Exposure (54%):** The percentage of borrowers with Credit Scores < 600.
+*   **Exposure in Risk (£552M):** The monetary value sitting in the dangerous "Red Zone" of the scatter plot.
 
 #### 📊 Visual Forensics
 *   **Risk Concentration Scatter Plot (LTV vs Credit Score):** *The Hero Visual.*
@@ -122,6 +135,8 @@ The power of this dashboard lies in its **Cross-Filtering capabilities** (Left S
     *   *Logic:* Identifies the correlation between asset value (Collateral) and borrower reliability.
 *   **Exposure in Risk Quadrant by Segment (Bar Chart):**
     *   *Insight:* **Families** and **Young Pros** hold the highest amount of toxic debt, suggesting aggressive lending to first-time buyers.
+*   **Portfolio Distribution by LTV Band (Column Chart):**
+    *   *Insight:* The tallest bars are in the **0.8 - 1.0** range. The bank has very few low-LTV loans, indicating a lack of conservative lending.
 
 #### 🧠 The "Quadrant Theory" Logic
 The Scatter Plot employs a **Ternary Risk Segmentation** model, color-coding customers based on their Credit Score bands while plotting them against their Asset Leverage (LTV).
@@ -146,17 +161,24 @@ The Scatter Plot employs a **Ternary Risk Segmentation** model, color-coding cus
 
 ---
 
-### 3️⃣ Dashboard 3: Digital Churn & Behavior
+### 3️⃣ Dashboard 3: Digital Churn & Behavior (Customer)
 *The "Customer View" – Analyzing retention and Neobank competition.*
 
 ![Digital Churn Screenshot](Dashboard_previews/3.Digital_Churn_&_Behavior.png)
 
+#### 🧮 KPI Analysis
+*   **Churn Rate (10.3%):** The percentage of customers closing accounts annually.
+*   **Capital Flight (£15M):** The total liquid assets transferred to competitors.
+*   **Fintech Leakage (33.1%):** 1/3 of all money leaving the bank goes directly to Neobanks (Monzo, Revolut).
+*   **Avg Digital Score (4.50):** The portfolio average is below the "Digitally Native" threshold of 5.0.
+
 #### 📊 Visual Forensics
 *   **Churn Rate by Digital Engagement (Column Chart):**
-    *   *Insight:* A clear negative correlation. As the **Digital Score (0-10)** increases, Churn Rate decreases.
+    *   *The "Digital Cliff":* A clear negative correlation. Customers with a Digital Score < 5.0 churn at **11-12%**. Customers with a score > 8.0 churn at only **~2%**.
+    *   *Insight:* Poor App adoption is the #1 driver of customer loss.
 *   **Fintech Competitor Breakdown (Bar Chart):**
-    *   *Insight:* **Wise** and **Monzo** are the top beneficiaries of capital flight, indicating customers are leaving for better FX rates or UX.
-
+    *   *What:* Where is the money going?
+    *   *Insight:* **Wise** is the top destination. This suggests customers are leaving because RBS's foreign exchange fees are too high compared to Wise's "Mid-Market Rate."
 #### 📱 Behavioral Correlation Analysis
 This dashboard proves the hypothesis: **"Digital Friction causes Churn."**
 *   **The "Digital Gap":** The charts reveal a distinct "Digital Cliff" at a score of **5.0**. Customers below this threshold churn at **11.2%**, while those above 8.0 churn at only **2.1%**.
@@ -168,18 +190,17 @@ This dashboard proves the hypothesis: **"Digital Friction causes Churn."**
 Unlike standard operational reports, this project utilizes a **"Strategic Dark Mode"** specifically designed for Executive Risk Monitors.
 
 *   **Color Semantics:**
-    *   **Deep Purple Background:** Reduces eye strain during long analysis sessions and provides high contrast for charts.
+    *   **Deep Purple Background:** Reduces eye strain during long analysis sessions and aligns with the Premium Banking aesthetic.
     *   **Alert Red (`#D60000`):** Used *exclusively* for negative trends (Default Rate increases, Capital Flight) to draw the eye immediately.
     *   **Safety Teal/Blue:** Used for neutral volume metrics to prevent visual clutter.
 *   **Navigation:** A persistent left-hand sidebar mimics SaaS application behavior, allowing users to switch contexts (Risk vs. Churn) without losing their filtered state.
-
 ---
 
 ## 🛠 Technical Implementation & Expertise
 
-### 🏗️ Data Architecture (SQL & Modeling)
-To ensure scalability, the data transformation logic was designed using **SQL Server** principles before being loaded into Power BI.
-*   **File:** [RBS_Data_Warehouse_ETL.sql](./scripts/RBS_Data_Warehouse_ETL.sql)
+### SQL Transformation (The "Brain")
+*   **Note on Data Architecture:** While the portfolio demonstration utilizes a static dataset (Excel/CSV), the production data pipeline logic has been modeled in SQL to demonstrate scalability. See `scripts/RBS_Data_Warehouse_ETL.sql` for the ELT logic.
+*   **Key Techniques:**
 *   **CTEs & Window Functions:** Used `ROW_NUMBER()` in SQL to deduplicate the customer registry and `RANK()` to grade credit scores.
 *   **Data Modeling:** Built a **Star Schema**, connecting `Fact_Installments` and `Fact_Capital_Flight` to shared dimensions (`Dim_Customer`, `Dim_Date`).
 
