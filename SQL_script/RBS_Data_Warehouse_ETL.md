@@ -1,15 +1,19 @@
 /*
-===========================================================================
-PROJECT:        RBS Credit Risk & Digital Churn Analysis
-FILE:           RBS_Data_Warehouse_ETL.sql
-AUTHOR:         Sagar Chaandwani
-DESCRIPTION:    ETL Transformation Logic to build the Star Schema for Power BI.
-                Techniques: CTEs, Window Functions, Categorization, Joins.
-===========================================================================
+========================================================================================
+PROJECT:    RBS Credit Risk & Digital Churn Analysis
+AUTHOR:     [Sagar Chaandwani]
+OBJECTIVE:  ETL Script to build the Star Schema (Facts & Dimensions) for Power BI.
+            
+KEY LOGIC:
+1. ROW_NUMBER(): To deduplicate the Customer Registry (Master Data Management).
+2. CASE STATEMENTS: To bin continuous variables (Age, Credit Score) into Buckets.
+3. CONDITIONAL LOGIC: To flag "Capital Flight" based on beneficiary bank names.
+4. CALCULATED COLUMNS: Loan-to-Value (LTV) Ratio generation at database level.
+========================================================================================
 */
 
 -- ========================================================================
--- 1. DIMENSION: Customer Registry
+-- 1. DIMENSION VIEW: Customer Registry
 -- Objective: Deduplicate customer master data and calculate demographic bins.
 -- ========================================================================
 CREATE VIEW Dim_Customer_Registry AS
@@ -21,6 +25,7 @@ WITH Raw_Cust AS (
         Segment, -- Family, Retiree, Young Pro, etc.
         Digital_Maturity_Score, -- Scale 1 to 10
         Nationality_Status,
+        
         -- Window Function: Get the latest record per customer if duplicates exist
         ROW_NUMBER() OVER(PARTITION BY Customer_ID ORDER BY Last_Updated_Date DESC) as rn
     FROM Staging_Customer_DB
@@ -38,6 +43,7 @@ SELECT
     Region,
     Segment,
     Digital_Maturity_Score,
+    
     -- Transformation: Digital Engagement Classification
     CASE 
         WHEN Digital_Maturity_Score >= 8 THEN 'Digitally Native'
