@@ -10,6 +10,21 @@ Star Schema / Snowflake	Banking & FinTech
 > **Professional Context:** This portfolio project demonstrates a Risk Intelligence architecture designed during my tenure as a Data Analyst at **Ascentiq Solutions**.
 >
 > *Note: While the data modeling, DAX logic, and strategic framework mirror real-world banking implementations delivered for the Royal Bank of Scotland (RBS), the underlying dataset used in this public repository is synthetic to comply with GDPR and NDA regulations.*
+
+# 🏦 Royal Bank of Scotland: Credit Risk Portfolio Engine
+
+**Project:** Portfolio Risk Management & Digital Churn Analysis  
+**Client:** Royal Bank of Scotland (via Ascentiq Solutions)  
+**Role:** Data Warehouse Analyst
+
+> **Professional Context:** This portfolio project demonstrates a Banking Intelligence system designed during my tenure at **Ascentiq Solutions**.
+>
+> *Note: While the data modeling, DAX logic, and strategic framework mirror real-world banking implementations delivered for RBS, the underlying dataset used in this public repository is synthetic to comply with GDPR and NDA regulations.*
+
+| **Tech Stack** | **Domain** | **Framework** |
+| :--- | :--- | :--- |
+| ![Power BI](https://img.shields.io/badge/Power_BI-Pro-yellow?style=flat-square) ![SQL](https://img.shields.io/badge/SQL-Server-red?style=flat-square) | **Retail Banking** | **Risk Quadrant Analysis** |
+
 ---
 
 
@@ -52,6 +67,18 @@ The bank faced a "Blind Spot" crisis across three critical vectors:
 7.  [Strategic Recommendations](#-strategic-recommendations)
 8.  [Assumptions & Future Scope](#-assumptions--future-scope)
 9.  [Data Dictionary](#-data-dictionary)
+
+## 📑 Executive Agenda
+1.  [Portfolio Performance Review](#-portfolio-performance-review) *(Executive Summary)*
+2.  [Risk Vectors Analyzed](#-risk-vectors-analyzed) *(Key Business Questions)*
+3.  [Data Warehouse Modeling](#-data-warehouse-modeling) *(Data Structure)*
+4.  [Visual Analytics Breakdown](#-visual-analytics-breakdown) *(Dashboard Deep Dive)*
+5.  [User Experience Strategy](#-user-experience-strategy) *(UI/UX)*
+6.  [Fiscal Strategy Proposals](#-fiscal-strategy-proposals) *(Strategic Recs)*
+7.  [Model Limitations & Roadmap](#-model-limitations--roadmap) *(Assumptions)*
+8.  [Solution Architecture](#-solution-architecture) *(Technical Implementation)*
+9.  [Metric Definitions](#-metric-definitions) *(Data Dictionary)*
+
 
 ---
 
