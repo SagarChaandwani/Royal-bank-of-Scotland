@@ -1,4 +1,4 @@
-# 🏦 Royal Bank of Scotland: Credit Risk Portfolio Engine
+# Royal Bank of Scotland: Credit Risk Portfolio Engine
 
 **Project:** Portfolio Risk Management & Digital Churn Analysis  
 **Client:** Royal Bank of Scotland (via Ascentiq Solutions)  
