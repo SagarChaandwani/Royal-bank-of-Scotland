@@ -1,8 +1,12 @@
 # 🏦 Royal Bank of Scotland (RBS): Credit Risk & Digital Churn Engine
 
-![alt text](https://img.shields.io/badge/Status-Production_Ready-darkblue?style=for-the-badge)
-![alt text](https://img.shields.io/badge/Classification-Confidential-red?style=for-the-badge)
-| ![Power BI](https://img.shields.io/badge/Power_BI-Pro-yellow?style=flat-square) ![SQL](https://img.shields.io/badge/SQL-Server-red?style=flat-square) ![DAX](https://img.shields.io/badge/DAX-Advanced-green?style=flat-square) | Star Schema / Single-Page App | Gig Economy & Fraud Ops |
+Tech Stack	Architecture	Domain
+![alt text](https://img.shields.io/badge/Power_BI-Pro-yellow?style=flat-square)
+![alt text](https://img.shields.io/badge/SQL-Server-red?style=flat-square)
+![alt text](https://img.shields.io/badge/DAX-Advanced-green?style=flat-square)
+
+Star Schema / Snowflake	Banking & FinTech
+
 > **Professional Context:** This portfolio project demonstrates a Risk Intelligence architecture designed during my tenure as a Data Analyst at **Ascentiq Solutions**.
 >
 > *Note: While the data modeling, DAX logic, and strategic framework mirror real-world banking implementations delivered for the Royal Bank of Scotland (RBS), the underlying dataset used in this public repository is synthetic to comply with GDPR and NDA regulations.*
