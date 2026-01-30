@@ -1,7 +1,7 @@
 # 🏦 Royal Bank of Scotland (RBS): Credit Risk & Digital Churn Engine
 
-![alt text](https://img.shields.io/badge/Status-Production_Ready-darkblue?style=for-the-badge)
-![alt text](https://img.shields.io/badge/Classification-Confidential-red?style=for-the-badge)
+| **Tech Stack** | **Architecture** | **Domain** |
+| :--- | :--- | :--- |
 
 > **Professional Context:** This portfolio project demonstrates a Risk Intelligence architecture designed during my tenure as a Data Analyst at **Ascentiq Solutions**.
 >
