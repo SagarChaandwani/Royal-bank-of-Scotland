@@ -17,6 +17,8 @@
 
 ##  Executive Summary 
 
+Insights from this analysis were designed to support decision-making by Senior Risk and Product stakeholders, enabling targeted intervention across lending policy, digital engagement, and retention strategy.
+
 **The Problem:**
 
    RBS managed a £769M loan portfolio but lacked visibility into:
@@ -59,7 +61,7 @@ The data model is architected as a **Star Schema** to ensure high-performance fi
 
 ---
 
-##  Dashboard Forensics
+##  Executive Dashboards
 
 ### Dashboard 1: Credit Risk Overview 
 *Below is the Executive "Pulse Check" used by Senior Risk Officers to monitor the £769M portfolio.*
