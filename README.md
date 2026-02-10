@@ -59,25 +59,25 @@ The data model is architected as a **Star Schema** to ensure high-performance fi
 
 ---
 
-## 🔍 Dashboard Forensics (Deep Dive)
+##  Dashboard Forensics
 
-### 1️⃣ Dashboard 1: Credit Risk Overview (Macro)
+### Dashboard 1: Credit Risk Overview 
 *Below is the Executive "Pulse Check" used by Senior Risk Officers to monitor the £769M portfolio.*
 
 ![Credit Risk Overview Dashboard](Dashboard_previews/1.Credit_Risk_Overview.png)
 
 ---
 
-## 🔍 Key Insights (The Data Story)
+##  Key Insights (The Data Story)
 
-### 1️⃣ The Hidden Competitor Isn’t a Bank
+###  The Hidden Competitor Isn’t a Bank
 Tracking outbound transfers revealed that **33% of lost deposits** were flowing directly to **Wise** and **Revolut**.
 
 *   **Insight:** Customers weren’t leaving for better interest rates — they were leaving for lower FX fees and better App UX.
 *   **Evidence:** Capital flight spiked during holiday months (Dec/Jan), confirming usage for travel and international spend.
 ---
 
-### 2️⃣ Dashboard 2: The Risk Quadrant 
+###  Dashboard 2: The Risk Quadrant 
 
 
 ![Risk Quadrant Screenshot](Dashboard_previews/2.Risk_Quadrant.png)
@@ -89,7 +89,7 @@ Using a **Risk Quadrant Model** (LTV vs. Credit Score), I segmented the full por
   
 ---
 
-### 3️⃣ Dashboard 3: Digital Churn & Behavior (Customer)
+###  Dashboard 3: Digital Churn & Behavior
 
 ![Digital Churn Screenshot](Dashboard_previews/3.Digital_Churn_&_Behavior.png)
 
@@ -102,7 +102,7 @@ I tested the hypothesis: *"Does a bad mobile app experience actually cause custo
 
 ---
 
-## 💡 Strategic Recommendations
+##  Strategic Recommendations
 Based on these insights, I proposed the following actions which were presented to stakeholders:
 
 1.  **Stop the Bleeding:** Launch a "Fee-Free FX" tier targeting Young Professionals to recapture the £15M Fintech leakage.
@@ -112,7 +112,7 @@ Based on these insights, I proposed the following actions which were presented t
 
 ---
 
-## 🛠 Technical Implementation & Expertise
+##  Technical Implementation & Expertise
 
 **1. Data Modeling (Star Schema)**
 *   Engineered a robust SQL backend linking `Fact_Credit_Exposure` and `Fact_Capital_Flight` to shared dimensions (`Dim_Customer`, `Dim_Product`).
@@ -129,7 +129,7 @@ Based on these insights, I proposed the following actions which were presented t
 
 ---
 
-## 👔 Why This Project Matters
+##  Why This Project Matters
 This case study demonstrates my ability to:
 *   **Translate** complex banking data into executive-level decisions.
 *   **Balance** risk management with commercial growth.
