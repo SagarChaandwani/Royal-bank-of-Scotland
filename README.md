@@ -22,7 +22,7 @@ Insights from this analysis were designed to support decision-making by Senior R
 **The Problem:**
 
    RBS managed a £769M loan portfolio but lacked visibility into:
-1. Which assets were becoming high-risk (“toxic”)
+1. WHO is becoming high-risk before they default
 2. Why customers were moving capital to fintech competitors
 3. How digital behaviour was influencing churn
 This created blind spots across risk, retention, and regional exposure.
