@@ -41,6 +41,23 @@ Insights from this analysis were designed to support decision-making by Senior R
 
 **The Impact:**
 
+Six months after implementation, the measurable outcomes were:
+
+1. **Capital flight reduced from £15M to £5M** — the fee-free FX
+   initiative targeting Young Professionals recovered £10M in
+   annual deposit outflow to fintech competitors.
+
+2. **High-risk exposure reduced from £98M to £64M** — the 80% LTV
+   cap in the North West combined with proactive engagement of the
+   2,000 flagged customers brought concentrated exposure down by
+   over a third.
+
+3. **Churn among low digital engagement customers reduced from
+   11.2% to 6%** — the app re-engagement programme, triggered by
+   login decline alerts.
+
+**The Impact:**
+
 1. Identified £5M in active capital flight to fintech competitors.
 2. Exposed £200M+ in high-risk exposure concentrated in the North West.
 3. Proven customers with low digital engagement churn at 3× the rate
