@@ -22,15 +22,15 @@ Insights from this analysis were designed to support decision-making by Senior R
 **The Problem:**
 
    RBS managed a £769M loan portfolio but lacked visibility into:
-1. Who is becoming high-risk before they default.
-2. Why customers were moving capital to fintech competitors.
-3. How digital behaviour was influencing churn.
+1. Who is becoming high-risk before they default?
+2. Why customers were moving capital to fintech competitors?
+3. How digital behaviour was influencing churn?
 This created blind spots across risk, retention, and regional exposure.
 
 **The Solution:**
 
    I built a 360° Risk Intelligence System that unified:
-1. Credit risk (LTV, credit score, defaults).
+1. Credit risk (LTV, credit score).
 2. Digital engagement behaviour.
 3. Capital flight tracking to fintechs (Wise, Monzo, Revolut).
 
