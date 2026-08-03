@@ -25,7 +25,6 @@ Insights from this analysis were designed to support decision-making by Senior R
 1. Who is becoming high-risk before they default?
 2. Why customers were moving capital to fintech competitors?
 3. How digital behaviour was influencing churn?
-This created blind spots across risk, retention, and regional exposure.
 
 **The Solution:**
 
