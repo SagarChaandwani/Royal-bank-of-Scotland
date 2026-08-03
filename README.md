@@ -30,16 +30,22 @@ This created blind spots across risk, retention, and regional exposure.
 **The Solution:**
 
    I built a 360° Risk Intelligence System that unified:
-1. Credit risk (LTV, credit score, defaults)
-2. Digital engagement behaviour
-3. Capital flight tracking to fintechs (Wise, Monzo, Revolut)
+1. Credit risk (LTV, credit score, defaults).
+2. Digital engagement behaviour.
+3. Capital flight tracking to fintechs (Wise, Monzo, Revolut).
+
+**The Approach:**
+
+1. Discovery - Reframed the brief from monitor exposure to predict risk before it crystallises.
+2. So-What test.
+3. Wireframe before code.
 
 **The Impact:**
 
-1. Identified £15M in active capital flight to fintech competitors
-2. Exposed £300M+ in high-risk exposure concentrated in the North West
+1. Identified £5M in active capital flight to fintech competitors.
+2. Exposed £200M+ in high-risk exposure concentrated in the North West.
 3. Proven customers with low digital engagement churn at 3× the rate
-This enabled targeted intervention by senior risk and product stakeholders.
+
 
 ---
 
@@ -87,7 +93,7 @@ Tracking outbound transfers revealed that **33% of lost deposits** were flowing 
 Using a **Risk Quadrant Model** (LTV vs. Credit Score), I segmented the full portfolio to find the intersection of leverage and reliability.
 
 *   **Finding:** **49.8%** of the portfolio sat in the "High-Risk" quadrant.
-*   **Root Cause:** Aggressive high-LTV lending (>90%) to "Young Professionals" in the North West, leaving assets highly exposed to interest rate shocks.
+*   **Root Cause:** Aggressive high-LTV lending (>80%) to "Young Professionals" in the North West, leaving assets highly exposed to interest rate shocks.
   
 ---
 
